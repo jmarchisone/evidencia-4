@@ -4,7 +4,9 @@ import pytest
 
 def test_creacion():
     mi_maquina = MaquinaDeDialisis("DBB-05", "NIKKISUS")
-    #    assert mi_maquina == "Máquina de diálisis modelo DBB-05 del fabricante NIKKISUS"
+    assert (
+        str(mi_maquina) == "Máquina de diálisis modelo DBB-05 del fabricante NIKKISUS"
+    )
     assert mi_maquina.modelo == "DBB-05"
     assert mi_maquina.fabricante == "NIKKISUS"
     assert mi_maquina.en_tratamiento == False
