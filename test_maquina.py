@@ -4,9 +4,6 @@ import pytest
 
 def test_creacion():
     mi_maquina = MaquinaDeDialisis("DBB-05", "NIKKISUS")
-    assert (
-        str(mi_maquina) == "Máquina de diálisis modelo DBB-05 del fabricante NIKKISUS"
-    )
     assert mi_maquina.modelo == "DBB-05"
     assert mi_maquina.fabricante == "NIKKISUS"
     assert mi_maquina.en_tratamiento == False
@@ -33,3 +30,8 @@ def test_asignar():
         mi_maquina_4.asignar_paciente("Gustavo Adrián")
         == "Paciente Gustavo Adrián asignado a la máquina de diálisis modelo Innova."
     )
+
+
+def test_str():
+    mi_maquina_5 = MaquinaDeDialisis("JL07", "MINI")
+    assert str(mi_maquina_5) == "Máquina de diálisis modelo JL07 del fabricante MINI"
