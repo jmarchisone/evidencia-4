@@ -15,6 +15,7 @@ def test_iniciar():
     assert (
         mi_maquina_2.iniciar_tratamiento(30) == "Tratamiento iniciado por 30 minutos."
     )
+    assert mi_maquina_2.iniciar_tratamiento(20) == "La máquina ya está en tratamiento."
 
 
 def test_detener():
